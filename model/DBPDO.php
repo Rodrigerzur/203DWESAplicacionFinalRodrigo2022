@@ -12,9 +12,9 @@ class DBPDO implements DB{
      */
     public static function ejecutarConsulta($sentenciaSQL, $parametros = null){
         try {
-            $DB203DWESLogInLogOutMulticapa = new PDO(HOST, USER, PASSWORD);//Hago la conexion con la base de datos
-            $DB203DWESLogInLogOutMulticapa -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);// Establezco el atributo para la aparicion de errores con ATTR_ERRMODE y le pongo que cuando haya un error se lance una excepcion con ERRMODE_EXCEPTION
-            $resultadoConsulta = $DB203DWESLogInLogOutMulticapa->prepare($sentenciaSQL); // Preparo la consulta antes de ejecutarla
+            $DB203DWESAplicacionFinalRodrigo2022 = new PDO(HOST, USER, PASSWORD);//Hago la conexion con la base de datos
+            $DB203DWESAplicacionFinalRodrigo2022 -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);// Establezco el atributo para la aparicion de errores con ATTR_ERRMODE y le pongo que cuando haya un error se lance una excepcion con ERRMODE_EXCEPTION
+            $resultadoConsulta = $DB203DWESAplicacionFinalRodrigo2022->prepare($sentenciaSQL); // Preparo la consulta antes de ejecutarla
             $resultadoConsulta -> execute($parametros);//Ejecuto la consulta con el array de parametros
             return $resultadoConsulta; //Devuelvo el resultado de la consulta
         }catch(PDOException $excepcion){//Codigo que se ejecuta si hay algun error
@@ -23,7 +23,7 @@ class DBPDO implements DB{
             header('Location: index.php');
             exit;
         } finally{
-            unset($DB203DWESLogInLogOutMulticapa);//Cierro la conexion
+            unset($DB203DWESAplicacionFinalRodrigo2022);//Cierro la conexion
         }
     }
 }
