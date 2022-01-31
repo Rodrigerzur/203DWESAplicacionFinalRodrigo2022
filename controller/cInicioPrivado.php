@@ -32,9 +32,9 @@ if(isset($_REQUEST['detalle'])){ //Si el usuario logeado pulsa el boton de detal
     exit;
 }
 
-$sDescUsuario = $_SESSION['usuario203DWESLogInLogOutMulticapa']->getDescUsuario(); //Variable que contiene la descripcion del usuario loggeado
-$iNumConexiones = $_SESSION['usuario203DWESLogInLogOutMulticapa']->getNumConexiones(); //Variable que contiene el numero total de conexiones del usuario loggeado
-$sFechaHoraUltimaConexionAnterior = $_SESSION['usuario203DWESLogInLogOutMulticapa']->getFechaHoraUltimaConexionAnterior(); //Variable que contiene la fecha de la ultima conexion del usuario loggeado
+$sDescUsuario = $_SESSION['usuario203DWESAplicacionFinalRodrigo2022']->getDescUsuario(); //Variable que contiene la descripcion del usuario loggeado
+$iNumConexiones = $_SESSION['usuario203DWESAplicacionFinalRodrigo2022']->getNumConexiones(); //Variable que contiene el numero total de conexiones del usuario loggeado
+$sFechaHoraUltimaConexionAnterior = $_SESSION['usuario203DWESAplicacionFinalRodrigo2022']->getFechaHoraUltimaConexionAnterior(); //Variable que contiene la fecha de la ultima conexion del usuario loggeado
 
 require_once $vistas['layout']; //Cargo la pagina de inicio privado
 ?>

@@ -43,7 +43,7 @@ if(isset($_REQUEST['crear'])){
 
 if($entradaOK){
     $oUsuarioNuevo = UsuarioPDO::altaUsuario($_REQUEST['CodUsuario'], $_REQUEST['Password'], $_REQUEST['DescUsuario']);
-    $_SESSION['usuario203DWESLogInLogOutMulticapa'] = $oUsuarioNuevo; //Guardo en la sesion el contenido del usuario nuevo
+    $_SESSION['usuario203DWESAplicacionFinalRodrigo2022'] = $oUsuarioNuevo; //Guardo en la sesion el contenido del usuario nuevo
     $_SESSION['paginaEnCurso'] = 'inicioprivado'; //Asigno a la pagina en curso la pagina de inicio privado
     header('Location: index.php'); //Redirecciono a inicio privado
     exit;

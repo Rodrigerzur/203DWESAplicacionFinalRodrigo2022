@@ -19,7 +19,7 @@ if(isset($_REQUEST['aceptar'])){
     $aErrores['passwordNueva'] = validacionFormularios::validarPassword($_REQUEST['PasswordNueva'], 8, 1, 1, OBLIGATORIO); //Compruebo si la password esta bien rellenada
     $aErrores['passwordRepetir'] = validacionFormularios::validarPassword($_REQUEST['RepetirPasswordNueva'], 8, 1, 1, OBLIGATORIO); //Compruebo si la password repetida esta bien rellenada)
     
-    if(!UsuarioPDO::validarUsuario($_SESSION['usuario203DWESLogInLogOutMulticapa']->getCodUsuario(), $_REQUEST['PasswordActual'])){
+    if(!UsuarioPDO::validarUsuario($_SESSION['usuario203DWESAplicacionFinalRodrigo2022']->getCodUsuario(), $_REQUEST['PasswordActual'])){
         $aErrores['passwordActual'] = 'Password incorrecta';
         $entradaOK = false;//Le doy el valor false a entradaOK
     }else{
@@ -41,7 +41,7 @@ if(isset($_REQUEST['aceptar'])){
 }
 
 if($entradaOK){
-    $_SESSION['usuario203DWESLogInLogOutMulticapa'] = UsuarioPDO::cambiarPassword($_SESSION['usuario203DWESLogInLogOutMulticapa'], $_REQUEST['PasswordNueva']);
+    $_SESSION['usuario203DWESAplicacionFinalRodrigo2022'] = UsuarioPDO::cambiarPassword($_SESSION['usuario203DWESAplicacionFinalRodrigo2022'], $_REQUEST['PasswordNueva']);
     $_SESSION['paginaEnCurso'] = 'micuenta'; //Asigno a la pagina en curso la pagina micuenta
     header('Location: index.php'); //Redireciono de nuevo a micuenta
     exit;
