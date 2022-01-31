@@ -1,5 +1,5 @@
 <?php
-require_once '../config/confDBPDO.php'; //Archivo con configuracion de PDO
+require_once '../config/configDBPDO.php'; //Archivo con configuracion de PDO
 try {
 
     $miDB = new PDO(HOST, USER, PASSWORD);
@@ -7,10 +7,6 @@ try {
 
     $sql = <<<EOD
 USE dbs4868791;
-INSERT INTO T02_Departamento(T02_CodDepartamento,T02_DescDepartamento,T02_FechaCreacionDepartamento,T02_VolumenNegocio) VALUES 
-('FOL', 'departamento FOL', 1406149672, 102.4),
-('DAW', 'departamento DAW', 1406149672, 1000.3),
-('DIW', 'departamento DIW', 1406149672, 289.3);
 
 INSERT INTO T02_Usuario(T01_CodUsuario, T01_Password, T01_DescUsuario) VALUES
 ('albertoF',SHA2('albertoFpaso',256),'AlbertoF'),
@@ -24,8 +20,7 @@ INSERT INTO T02_Usuario(T01_CodUsuario, T01_Password, T01_DescUsuario) VALUES
 ('sonia',SHA2('soniapaso',256),'Sonia'),
 ('heraclio',SHA2('heracliopaso',256),'Heraclio'),
 ('amor',SHA2('amorpaso',256),'Amor'),
-('antonio',SHA2('antoniopaso',256),'Antonio'),
-('albertoB',SHA2('albertoBpaso',256),'AlbertoB');
+('antonio',SHA2('antoniopaso',256),'Antonio');
 EOD;
 
     $miDB->exec($sql);

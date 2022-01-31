@@ -1,6 +1,6 @@
 <?php
 
-require_once '../config/confDBPDO.php'; //Archivo con configuracion de PDO
+require_once '../config/configDBPDO.php'; //Archivo con configuracion de PDO
 try {
 
     $miDB = new PDO(HOST, USER, PASSWORD);
@@ -23,5 +23,3 @@ EOD;
     unset($miDB);
 }
 ?>
-
-
