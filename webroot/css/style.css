@@ -21,9 +21,10 @@ and open the template in the editor.
 
 html, body{
     height: 100%; 
-    
 }
-
+body{
+    background: url("../media/cat.jpeg") no-repeat center center ;
+}
 
 input:focus{
     outline:none;
