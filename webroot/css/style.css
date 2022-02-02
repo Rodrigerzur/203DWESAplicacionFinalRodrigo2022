@@ -233,7 +233,7 @@ td{
 .user{
     color:red;
     font-weight: bold;
-    
+
 }
 
 footer, .footer{
@@ -261,7 +261,7 @@ footer a{
 .form{
     margin:auto;
     text-align: center;
-    background:transparent;
+    background:white;
     color: black;
     font-size:1.5em;
     width:50%;
@@ -273,4 +273,30 @@ li{
 }
 input{
     margin:5px;
+}
+
+.pdfbox{
+    width: 240px;
+    height: 375px;
+    
+    border: 2px solid black;
+    padding-bottom: 10px;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 20px 0 0;
+    margin-left: 23px;
+    margin-bottom: 30px;
+    vertical-align: top;
+    background-color:black;
+    overflow:hidden;
+}
+
+.titulopdf p{
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+
 }
