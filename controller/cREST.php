@@ -13,6 +13,16 @@ $aErrores = [//Array de errores
     'errorServidor' => null
 ];
 
+
+
+if(isset($_REQUEST['mostrarAPOD'])){
+   $iAPOD = REST::apod();
+}
+
+
+//------------------------------------------------------------------------------------------------------------------------------------------
+
+
 $entradaOK = true; //Variable de entrada correcta inicializada a true
 
 $iDevolucion = 0; //Variable para almacenar el resultado de la conversion
@@ -38,6 +48,9 @@ if ($entradaOK) { //Si la entrada ha sido correcta
         $aErrores['otraDivisa'] = "Las divisas no son correctas"; //Si la devolucion es 0 es que la divisa no existe y no es correcta
     }
 }
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------
 
 require_once $vistas['layout']; //Cargo la pagina de REST
 ?>

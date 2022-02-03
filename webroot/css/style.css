@@ -295,6 +295,7 @@ input{
 
 .titulopdf p{
     font-size: 15px;
+    font-weight: bold;
     color: white;
     text-align: center;
     font-family: sans-serif;

@@ -4,6 +4,16 @@
 <form class="buttonback">
     <input type="submit" value="Volver" name="volver" class="volver"/>
 </form>
+
+    <form name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="form" id="formularioapod">
+    <fieldset>
+        <input type="submit" value="Mostrar APOD" name="mostrarAPOD" class="volver"/>
+        <?php
+        echo $iAPOD;
+    ?>
+    </fieldset>
+</form>
+
     <form name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="form" id="formularioconversor">
         <fieldset>
             <p class="tituloiniciarsesion">Valor de Moneda<p>
