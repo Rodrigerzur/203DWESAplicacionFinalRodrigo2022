@@ -7,7 +7,7 @@
         <meta name="robots" content="index, follow">
         <meta name="application-name" content="Aplicacion Final">
         <meta name="description" content="Control de acceso e identificación de un usuario">
-        <link href="../203DWESLogInLogOutMulticapa/webroot/css/style.css" rel="stylesheet" type="text/css">
+        <link href="webroot/css/style.css" rel="stylesheet" type="text/css">
         <title>Index Aplicacion Final</title>
     </head>
     
@@ -20,7 +20,7 @@
         
         <footer class="footer">
             <p><a>&copy;</a><a href="http://daw203.ieslossauces.es/index.php">Rodrigo Geras</a> Todos los derechos reservados.</p>
-            <p><a href="https://github.com/Rodrigerzur?tab=repositories">Github</a> Ultima actualización: 31/01/2022</p>
+            <p><a href="https://github.com/Rodrigerzur?tab=repositories">Github</a> Ultima actualización: 02/02/2022</p>
         </footer>
     </body>
 </html>

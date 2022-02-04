@@ -1,6 +1,7 @@
 <?php
     require_once 'core/210322ValidacionFormularios.php';
-
+    
+    require_once 'model/REST.php';
     require_once 'model/DB.php';
     require_once 'model/UsuarioDB.php';
     require_once 'model/Usuario.php';
@@ -20,7 +21,8 @@
         "registro" => "controller/cRegistro.php",
         "micuenta" => "controller/cMiCuenta.php",
         "cambiarpassword" => "controller/cCambiarPassword.php",
-        "borrarcuenta" => "controller/cBorrarCuenta.php"
+        "borrarcuenta" => "controller/cBorrarCuenta.php",
+        "rest"=>"controller/cREST.php"
     ];
     $vistas = [
         "layout" => "view/layout.php",
@@ -33,6 +35,7 @@
         "registro" => "view/vRegistro.php",
         "micuenta" => "view/vMiCuenta.php",
         "cambiarpassword" => "view/vCambiarPassword.php",
-        "borrarcuenta" => "view/vBorrarCuenta.php"
+        "borrarcuenta" => "view/vBorrarCuenta.php",
+        "rest"=>"view/vREST.php"
     ]
 ?>

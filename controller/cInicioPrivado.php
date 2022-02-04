@@ -32,6 +32,13 @@ if(isset($_REQUEST['detalle'])){ //Si el usuario logeado pulsa el boton de detal
     exit;
 }
 
+if(isset($_REQUEST['rest'])){ //Si el usuario pulsa el boton de rest, mando al usuario a la pagina de rest
+    $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso']; //Guardo la pagina actual en paginaAnterior para recordarla
+    $_SESSION['paginaEnCurso'] = 'rest'; //Asigno a la pagina en curso la pagina de rest
+    header('Location: index.php'); //Redireciono de nuevo a rest
+    exit;
+}
+
 $sDescUsuario = $_SESSION['usuario203DWESAplicacionFinalRodrigo2022']->getDescUsuario(); //Variable que contiene la descripcion del usuario loggeado
 $iNumConexiones = $_SESSION['usuario203DWESAplicacionFinalRodrigo2022']->getNumConexiones(); //Variable que contiene el numero total de conexiones del usuario loggeado
 $sFechaHoraUltimaConexionAnterior = $_SESSION['usuario203DWESAplicacionFinalRodrigo2022']->getFechaHoraUltimaConexionAnterior(); //Variable que contiene la fecha de la ultima conexion del usuario loggeado
