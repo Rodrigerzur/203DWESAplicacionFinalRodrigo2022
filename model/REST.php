@@ -11,9 +11,9 @@ class REST {
         $response = @file_get_contents("https://api.nasa.gov/planetary/apod?api_key={$api_key}");
         $JSONApod = json_decode($response, true);
        
+        $rApod=$JSONApod['url'];
 
-
-        return $JSONApod['url'];
+        return $rApod;
     }
 
     /**

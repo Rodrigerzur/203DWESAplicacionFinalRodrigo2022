@@ -6,9 +6,9 @@
 </form>
 
 <form name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="form" id="formularioapod">
-    <fieldset>
+    <fieldset class="fieldsetapod">
         <input type="submit" value="Mostrar APOD" name="mostrarAPOD" class="volver"/>
-        <img src=" <?php echo isset($iAPOD) ?> "> 
+        <img src=" <?php echo ($iAPOD)??"" ?> " class="apod"> 
     </fieldset>
 </form>
 

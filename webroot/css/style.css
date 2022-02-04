@@ -301,3 +301,15 @@ input{
     font-family: sans-serif;
 
 }
+
+.apod{ 
+    max-height: 300px;
+    max-width:  300px;
+}
+.fieldsetapod{
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+}
