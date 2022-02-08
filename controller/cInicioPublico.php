@@ -2,14 +2,14 @@
 
 
 if(isset($_REQUEST['iniciarsesion'])){ //Si el usuario pulsa el boton de iniciar sesion, mando al usuario a la pagina de login
-    $_SESSION['paginaEnCurso'] = 'login'; //Asigno a la pagina en curso la pagina de login
+    $_SESSION['paginaEnCursoAplicacionFinal'] = 'login'; //Asigno a la pagina en curso la pagina de login
     header('Location: index.php'); //Redireciono de nuevo al login
     exit;
 }
 
 if(isset($_REQUEST['Registrarse'])){ //Si el usuario pulsa el boton de Registrarse, mando al usuario a la pagina de WorkingProgress
     $_SESSION['paginaAnterior'] = 'iniciopublico'; //Guardo la pagina actual en paginaAnterior para recordarla
-    $_SESSION['paginaEnCurso'] = 'registro'; //Asigno a la pagina en curso la pagina de working progress
+    $_SESSION['paginaEnCursoAplicacionFinal'] = 'registro'; //Asigno a la pagina en curso la pagina de working progress
     header('Location: index.php'); //Redireciono de nuevo al working progress
     exit;
 }

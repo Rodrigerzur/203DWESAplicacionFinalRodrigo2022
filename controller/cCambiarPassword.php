@@ -1,7 +1,7 @@
 <?php
 
 if(isset($_REQUEST['cancelar'])){ //Si el usuario pulsa el boton de cancelar, mando al usuario a la pagina de micuenta
-    $_SESSION['paginaEnCurso'] = 'micuenta'; //Asigno a la pagina en curso la pagina micuenta
+    $_SESSION['paginaEnCursoAplicacionFinal'] = 'micuenta'; //Asigno a la pagina en curso la pagina micuenta
     header('Location: index.php'); //Redireciono de nuevo a micuenta
     exit;
 }
@@ -42,7 +42,7 @@ if(isset($_REQUEST['aceptar'])){
 
 if($entradaOK){
     $_SESSION['usuario203DWESAplicacionFinalRodrigo2022'] = UsuarioPDO::cambiarPassword($_SESSION['usuario203DWESAplicacionFinalRodrigo2022'], $_REQUEST['PasswordNueva']);
-    $_SESSION['paginaEnCurso'] = 'micuenta'; //Asigno a la pagina en curso la pagina micuenta
+    $_SESSION['paginaEnCursoAplicacionFinal'] = 'micuenta'; //Asigno a la pagina en curso la pagina micuenta
     header('Location: index.php'); //Redireciono de nuevo a micuenta
     exit;
 }

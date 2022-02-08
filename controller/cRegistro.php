@@ -1,7 +1,7 @@
 <?php
 
 if(isset($_REQUEST['cancelar'])){ //Si el usuario pulsa el boton de cancelar, mando al usuario a la pagina de login
-    $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior']; //Asigno a la pagina en curso la pagina de login
+    $_SESSION['paginaEnCursoAplicacionFinal'] = $_SESSION['paginaAnterior']; //Asigno a la pagina en curso la pagina de login
     header('Location: index.php'); //Redireciono de nuevo a inicio publico
     exit;
 }
@@ -23,7 +23,7 @@ if(isset($_REQUEST['crear'])){
     
     $oUsuarioValido = UsuarioPDO::validarCodNoExiste($_REQUEST['CodUsuario']); //Compruebo si el usuario existe con la funcion buscar usuario por cod
     if($oUsuarioValido){ //Si me devuelve el objeto el usuario ya existe
-        $sError['codUsuario'] = 'El usuario ya existe.';
+        $aErrores['codUsuario'] = 'El usuario ya existe.';
     }
          
     if($_REQUEST['Password'] != $_REQUEST['RepetirPassword']){
@@ -44,7 +44,7 @@ if(isset($_REQUEST['crear'])){
 if($entradaOK){
     $oUsuarioNuevo = UsuarioPDO::altaUsuario($_REQUEST['CodUsuario'], $_REQUEST['Password'], $_REQUEST['DescUsuario']);
     $_SESSION['usuario203DWESAplicacionFinalRodrigo2022'] = $oUsuarioNuevo; //Guardo en la sesion el contenido del usuario nuevo
-    $_SESSION['paginaEnCurso'] = 'inicioprivado'; //Asigno a la pagina en curso la pagina de inicio privado
+    $_SESSION['paginaEnCursoAplicacionFinal'] = 'inicioprivado'; //Asigno a la pagina en curso la pagina de inicio privado
     header('Location: index.php'); //Redirecciono a inicio privado
     exit;
 }

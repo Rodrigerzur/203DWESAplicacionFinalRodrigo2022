@@ -14,27 +14,27 @@ if(isset($_REQUEST['cerrarsesion'])){ //Si el usuario pulsa el boton de cerrar s
 
 if(isset($_REQUEST['editarperfil'])){ //Si el usuario pulsa el boton de editarperfil, mando al usuario a la pagina de MiCuenta
     $_SESSION['paginaAnterior'] = 'inicioprivado'; //Guardo la pagina actual en paginaAnterior para recordarla
-    $_SESSION['paginaEnCurso'] = 'micuenta'; //Asigno a la pagina en curso la pagina de MiCuenta
+    $_SESSION['paginaEnCursoAplicacionFinal'] = 'micuenta'; //Asigno a la pagina en curso la pagina de MiCuenta
     header('Location: index.php'); //Redireciono de nuevo a MiCuenta
     exit;
 }
 
 if(isset($_REQUEST['mtodepartamentos'])){ //Si el usuario pulsa el boton de mtodepartamentos, mando al usuario a la pagina de WorkingProgress
     $_SESSION['paginaAnterior'] = 'inicioprivado'; //Guardo la pagina actual en paginaAnterior para recordarla
-    $_SESSION['paginaEnCurso'] = 'wip'; //Asigno a la pagina en curso la pagina de working progress
+    $_SESSION['paginaEnCursoAplicacionFinal'] = 'wip'; //Asigno a la pagina en curso la pagina de working progress
     header('Location: index.php'); //Redireciono de nuevo al login
     exit;
 }
 
 if(isset($_REQUEST['detalle'])){ //Si el usuario logeado pulsa el boton de detalle
-    $_SESSION['paginaEnCurso'] = 'detalle'; //Asigno a la pagina en curso la pagina de detalle
+    $_SESSION['paginaEnCursoAplicacionFinal'] = 'detalle'; //Asigno a la pagina en curso la pagina de detalle
     header('Location: index.php'); //Redirecciono a detalle
     exit;
 }
 
 if(isset($_REQUEST['rest'])){ //Si el usuario pulsa el boton de rest, mando al usuario a la pagina de rest
-    $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso']; //Guardo la pagina actual en paginaAnterior para recordarla
-    $_SESSION['paginaEnCurso'] = 'rest'; //Asigno a la pagina en curso la pagina de rest
+    $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCursoAplicacionFinal']; //Guardo la pagina actual en paginaAnterior para recordarla
+    $_SESSION['paginaEnCursoAplicacionFinal'] = 'rest'; //Asigno a la pagina en curso la pagina de rest
     header('Location: index.php'); //Redireciono de nuevo a rest
     exit;
 }

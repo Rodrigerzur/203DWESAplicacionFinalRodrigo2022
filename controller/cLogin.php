@@ -1,14 +1,14 @@
 <?php
 
 if(isset($_REQUEST['volver'])){ //Si el usuario pulsa el boton de volver, mando al usuario a la pagina de inicio publico
-    $_SESSION['paginaEnCurso'] = 'iniciopublico'; //Asigno a la pagina en curso la pagina de inicio publico
+    $_SESSION['paginaEnCursoAplicacionFinal'] = 'iniciopublico'; //Asigno a la pagina en curso la pagina de inicio publico
     header('Location: index.php'); //Redireciono de nuevo a inicio publico
     exit;
 }
 
 if(isset($_REQUEST['Registrarse'])){ //Si el usuario pulsa el boton de Registrarse, mando al usuario a la pagina de registro
     $_SESSION['paginaAnterior'] = 'login';
-    $_SESSION['paginaEnCurso'] = 'registro'; //Asigno a la pagina en curso la pagina de registro
+    $_SESSION['paginaEnCursoAplicacionFinal'] = 'registro'; //Asigno a la pagina en curso la pagina de registro
     header('Location: index.php'); //Redireciono de nuevo a registro
     exit;
 }
@@ -42,7 +42,7 @@ if (isset($_REQUEST['entrar'])) { //Si le ha dado al boton de enviar valido los 
 if($entradaOK){
     $oUsuarioValido = UsuarioPDO::registrarUltimaConexion($oUsuarioValido); //Registro la ultima conexion y actualizo el numero de conexiones con el metodo registrarUltimaConexion
     $_SESSION['usuario203DWESAplicacionFinalRodrigo2022'] = $oUsuarioValido; //Guardo en la sesion el contenido del usuario valido
-    $_SESSION['paginaEnCurso'] = 'inicioprivado'; //Asigno a la pagina en curso la pagina de inicio privado
+    $_SESSION['paginaEnCursoAplicacionFinal'] = 'inicioprivado'; //Asigno a la pagina en curso la pagina de inicio privado
     header('Location: index.php'); //Redirecciono a inicio privado
     exit;
 }
