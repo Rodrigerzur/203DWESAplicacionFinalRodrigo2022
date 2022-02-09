@@ -20,6 +20,8 @@
         
         <footer class="footer">
             <p><a>&copy;</a><a href="http://daw203.ieslossauces.es/index.php">Rodrigo Geras</a> Todos los derechos reservados.</p>
+            <p><a href="doc/html/index.html">Documentación</a></p>
+            <p><a href="doc/html/index.html">Tecnologias usadas</a></p>
             <p><a href="https://github.com/Rodrigerzur/203DWESAplicacionFinalRodrigo2022">Github</a> Ultima actualización: 04/02/2022</p>
         </footer>
     </body>
