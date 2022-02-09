@@ -9,6 +9,9 @@
     <fieldset class="fieldsetapod">
         <input type="submit" value="Mostrar APOD" name="mostrarAPOD" class="volver"/>
         <img src=" <?php echo ($iAPOD)??"" ?> " class="apod"> 
+        <iframe width="420" height="315"
+src=" <?php echo ($iAPOD)??"" ?> ">
+</iframe>
     </fieldset>
 </form>
 
