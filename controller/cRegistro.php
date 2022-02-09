@@ -16,14 +16,14 @@ $aErrores = [
 $entradaOK = true;
 
 if(isset($_REQUEST['crear'])){
-    $aErrores['codUsuario'] = validacionFormularios::comprobarAlfabetico($_REQUEST['CodUsuario'], 10, 1, OBLIGATORIO); //Compruebo si el nombre de usuario esta bien rellenado
+    $aErrores['codUsuario'] = validacionFormularios::comprobarAlfabetico($_REQUEST['CodUsuario'], 8, 1, OBLIGATORIO); //Compruebo si el nombre de usuario esta bien rellenado
     $aErrores['descUsuario'] = validacionFormularios::comprobarAlfabetico($_REQUEST['DescUsuario'], 200, 1, OBLIGATORIO); //Compruebo si la descripcion del usuario esta bien rellenada
     $aErrores['password'] = validacionFormularios::validarPassword($_REQUEST['Password'], 8, 1, 1, OBLIGATORIO); //Compruebo si la password esta bien rellenada
     $aErrores['repetirPassword'] = validacionFormularios::validarPassword($_REQUEST['RepetirPassword'], 8, 1, 1, OBLIGATORIO); //Compruebo si la password repetida esta bien rellenada
     
     $oUsuarioValido = UsuarioPDO::validarCodNoExiste($_REQUEST['CodUsuario']); //Compruebo si el usuario existe con la funcion buscar usuario por cod
     if($oUsuarioValido){ //Si me devuelve el objeto el usuario ya existe
-        $sError['codUsuario'] = 'El usuario ya existe.';
+        $aErrores['codUsuario'] = 'El usuario ya existe.';
     }
          
     if($_REQUEST['Password'] != $_REQUEST['RepetirPassword']){

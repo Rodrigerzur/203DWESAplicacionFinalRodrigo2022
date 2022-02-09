@@ -8,7 +8,7 @@ if(isset($_REQUEST['cancelar'])){ //Si el usuario pulsa el boton de cancelar, ma
 
 if(isset($_REQUEST['eliminarcuenta'])){ //Si el usuario pulsa el boton de eliminar cuenta, mando al usuario a la pagina de eliminar cuenta
     $_SESSION['paginaAnterior'] = 'micuenta'; //Guardo la pagina actual en paginaAnterior para recordarla
-    $_SESSION['paginaEnCurso'] = 'wip'; //Asigno a la pagina en curso la pagina de eliminar cuenta
+    $_SESSION['paginaEnCurso'] = 'borrarcuenta'; //Asigno a la pagina en curso la pagina de eliminar cuenta
     header('Location: index.php'); //Redireciono de nuevo a eliminar cuenta
     exit;
 }

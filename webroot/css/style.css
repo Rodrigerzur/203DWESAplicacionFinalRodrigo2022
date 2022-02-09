@@ -18,9 +18,13 @@ and open the template in the editor.
     margin: 0;
     padding: 0;
 }
-
-html, body{
-    height: 100%; 
+html{
+    height:100%;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100%; 
+    position:relative;
 }
 body{
     background: url("../media/cat.jpeg") no-repeat center center ;
@@ -242,7 +246,7 @@ footer, .footer{
     padding:10px;
     font-weight: bold;
     font-size:2em;
-    position:fixed;
+    position:absolute;
     bottom:0;
     width:100%;
     background-color:black;
@@ -260,6 +264,7 @@ footer a{
 
 .form{
     margin:auto;
+    position: relative;
     text-align: center;
     background:white;
     color: black;
