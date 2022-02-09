@@ -16,7 +16,7 @@
             <h1>203DWESAplicacionFinalRodrigo2022</h1>
         </header>
         
-        <?php require_once $vistas[$_SESSION['paginaEnCursoAplicacionFinal']];?>
+        <?php require_once $vistas[$_SESSION['paginaEnCurso']];?>
         
         <footer class="footer">
             <p><a>&copy;</a><a href="http://daw203.ieslossauces.es/index.php">Rodrigo Geras</a> Todos los derechos reservados.</p>

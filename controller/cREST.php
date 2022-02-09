@@ -1,8 +1,8 @@
 <?php
 
 if (isset($_REQUEST['volver'])) { //Si el usuario pulsa el boton de volver, le mando a la ventana de Inicio privado de nuevo
-    $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCursoAplicacionFinal']; //Guardo la pagina actual en paginaAnterior para recordarla
-    $_SESSION['paginaEnCursoAplicacionFinal'] = 'inicioprivado'; //Asigno a la pagina el curso la pagina de inicio privado
+    $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso']; //Guardo la pagina actual en paginaAnterior para recordarla
+    $_SESSION['paginaEnCurso'] = 'inicioprivado'; //Asigno a la pagina el curso la pagina de inicio privado
     header('Location: index.php'); //Redireciono de nuevo al login
     exit;
 }

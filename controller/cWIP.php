@@ -8,7 +8,7 @@
 
 
 if(isset($_REQUEST['volverwip'])){ //Si el usuario pulsa el boton de volver, mando al usuario a la pagina de inicio publico
-    $_SESSION['paginaEnCursoAplicacionFinal'] = $_SESSION['paginaAnterior']; //Asigno a la pagina en curso la pagina de inicio publico
+    $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior']; //Asigno a la pagina en curso la pagina de inicio publico
     header('Location: index.php'); //Redireciono de nuevo al inicio publico
     exit;
 }

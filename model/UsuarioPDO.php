@@ -139,5 +139,14 @@ class UsuarioPDO implements UsuarioDB{
             return false;
         }
     }
+    
+     public static function borrarUsuario($oUsuario){
+        //Consulta SQL para borrar el usuario
+        $consultaEliminarUsuario = <<<CONSULTA
+            DELETE FROM T02_Usuario WHERE T01_CodUsuario="{$oUsuario->getCodUsuario()}";
+        CONSULTA;
+        
+        return DBPDO::ejecutarConsulta($consultaEliminarUsuario);
+    }
 }
 ?>

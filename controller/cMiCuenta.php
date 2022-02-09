@@ -1,21 +1,21 @@
 <?php
 
 if(isset($_REQUEST['cancelar'])){ //Si el usuario pulsa el boton de cancelar, mando al usuario a la pagina de inicio privado
-    $_SESSION['paginaEnCursoAplicacionFinal'] = 'inicioprivado'; //Asigno a la pagina en curso la pagina inicio privado
+    $_SESSION['paginaEnCurso'] = 'inicioprivado'; //Asigno a la pagina en curso la pagina inicio privado
     header('Location: index.php'); //Redireciono de nuevo a inicio privado
     exit;
 }
 
 if(isset($_REQUEST['eliminarcuenta'])){ //Si el usuario pulsa el boton de eliminar cuenta, mando al usuario a la pagina de eliminar cuenta
     $_SESSION['paginaAnterior'] = 'micuenta'; //Guardo la pagina actual en paginaAnterior para recordarla
-    $_SESSION['paginaEnCursoAplicacionFinal'] = 'wip'; //Asigno a la pagina en curso la pagina de eliminar cuenta
+    $_SESSION['paginaEnCurso'] = 'borrarcuenta'; //Asigno a la pagina en curso la pagina de eliminar cuenta
     header('Location: index.php'); //Redireciono de nuevo a eliminar cuenta
     exit;
 }
 
 if(isset($_REQUEST['cambiarpassword'])){ //Si el usuario pulsa el boton de cambiar password, mando al usuario a la pagina de cambiar password
     $_SESSION['paginaAnterior'] = 'micuenta'; //Guardo la pagina actual en paginaAnterior para recordarla
-    $_SESSION['paginaEnCursoAplicacionFinal'] = 'cambiarpassword'; //Asigno a la pagina en curso la pagina de cambiar password
+    $_SESSION['paginaEnCurso'] = 'cambiarpassword'; //Asigno a la pagina en curso la pagina de cambiar password
     header('Location: index.php'); //Redireciono de nuevo a cambiar password
     exit;
 }
@@ -42,7 +42,7 @@ if(isset($_REQUEST['aceptar'])){ //Si el usuario pulsa el boton de aceptar, mand
 
 if($entradaOK){
     $_SESSION['usuario203DWESAplicacionFinalRodrigo2022'] = UsuarioPDO::modificarUsuario($_SESSION['usuario203DWESAplicacionFinalRodrigo2022'], $_REQUEST['DescUsuario']); //Modifico el usuario en la base de datos
-    $_SESSION['paginaEnCursoAplicacionFinal'] = 'inicioprivado'; //Asigno a la pagina en curso la pagina de inicio privado
+    $_SESSION['paginaEnCurso'] = 'inicioprivado'; //Asigno a la pagina en curso la pagina de inicio privado
     header('Location: index.php'); //Redireciono de nuevo a inicio privado
     exit;
 }
