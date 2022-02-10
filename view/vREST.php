@@ -8,10 +8,21 @@
 <form name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="form" id="formularioapod">
     <fieldset class="fieldsetapod">
         <input type="submit" value="Mostrar APOD" name="mostrarAPOD" class="volver"/>
-        <img src=" <?php echo ($iAPOD)??"" ?> " class="apod"> 
-        <iframe width="420" height="315"
-src=" <?php echo ($iAPOD)??"" ?> ">
-</iframe>
+
+        <?php
+        $patron = "/youtube/";
+        if (preg_match($patron, $iAPOD)) {
+            ?>
+            <iframe width="420" height="315"
+                    src=" <?php echo ($iAPOD) ?? "" ?> ">
+            </iframe>
+            <?php
+        } else {
+            ?>
+            <img src=" <?php echo ($iAPOD) ?? "" ?> " class="apod"> 
+            <?php
+        }
+        ?>
     </fieldset>
 </form>
 
