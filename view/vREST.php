@@ -10,6 +10,7 @@
         <input type="submit" value="Mostrar APOD" name="mostrarAPOD" class="volver"/>
 
         <?php
+        if(isset($_REQUEST['mostrarAPOD'])){
         $patron = "/youtube/";
         if (preg_match($patron, $iAPOD)) {
             ?>
@@ -21,6 +22,7 @@
             ?>
             <img src=" <?php echo ($iAPOD) ?? "" ?> " class="apod"> 
             <?php
+        }
         }
         ?>
     </fieldset>
