@@ -6,7 +6,7 @@ try {
     $miDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $sql = <<<EOD
-USE dbs4868791;
+USE dbs4868791z;
 
 INSERT INTO T02_Usuario(T01_CodUsuario, T01_Password, T01_DescUsuario) VALUES
 ('albertoF',SHA2('albertoFpaso',256),'AlbertoF'),

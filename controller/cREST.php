@@ -52,5 +52,46 @@ if ($entradaOK) { //Si la entrada ha sido correcta
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------
+$dAjenoEntradaOK = true; //Variable de entrada correcta inicializada a true
+
+$aErroresDepartamentoAjeno = [ //Array de errores
+    'eBuscarDepartamento' => null,
+    'eResultado' => null
+];
+
+if (isset($_REQUEST['buscarDepartamentoAjeno'])) {
+    $aErroresDepartamentoAjeno['eBuscarDepartamento'] = validacionFormularios::comprobarAlfabetico($_REQUEST['codDepartamentoAjeno'], 3, 3, OBLIGATORIO); //Valido los datos pasados por teclado de codigo departamento
+    
+    //Comprobar si algun campo del array de errores ha sido rellenado
+    foreach ($aErroresDepartamentoAjeno as $campo => $error) {//recorro el array errores
+        if ($error != null) {//Compruebo si hay algun error
+            $dAjenoEntradaOK = false;//Le doy el valor false a entradaOK
+            $_REQUEST[$campo] = '';//Limpio el campo del formulario
+        }
+    }
+}else{ //Si el usuario no le ha dado al boton de buscar
+    $dAjenoEntradaOK = false;
+}
+
+if($dAjenoEntradaOK){
+    $oResultadoDepAjeno = REST::buscarDepartamentoAjeno($_REQUEST['codDepartamentoAjeno']);
+    if(is_object($oResultadoDepAjeno)){
+        $aDepartamentoAjeno = [
+            'codDepartamento' => $oResultadoDepAjeno->getCodDepartamento(),
+            'descDepartamento' => $oResultadoDepAjeno->getDescDepartamento(),
+            'fechaCreacionDepartamento' => $oResultadoDepAjeno->getFechaCreacionDepartamento(),
+            'volumenDeNegocio' => $oResultadoDepAjeno->getVolumenDeNegocio(),
+            'fechaBajaDepartamento' => $oResultadoDepAjeno->getFechaBajaDepartamento()
+        ];
+    }else{
+        $aErroresDepartamentoAjeno['eResultado'] = $oResultadoDepAjeno;
+    }
+}
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------
+
 require_once $vistas['layout']; //Cargo la pagina de REST
 ?>

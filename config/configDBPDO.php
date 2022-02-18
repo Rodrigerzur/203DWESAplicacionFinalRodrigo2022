@@ -8,9 +8,9 @@
 
 
 //define("HOST", "mysql:host=192.168.1.101;dbname=DB203DWESProyectoTema4");
-define("HOST","mysql:host=daw203.sauces.local;dbname=DB203DWESProyectoTema4");
-define("PASSWORD", "P@ssw0rd");
-define("USER", "User203DWESProyectoTema4");
+//define("HOST","mysql:host=daw203.sauces.local;dbname=DB203DWESProyectoTema4");
+//define("PASSWORD", "P@ssw0rd");
+//define("USER", "User203DWESProyectoTema4");
 
 /*
 define("HOST","mysql:host=db5005797349.hosting-data.io;dbname=dbs4868791");
@@ -18,3 +18,6 @@ define("HOST","mysql:host=db5005797349.hosting-data.io;dbname=dbs4868791");
    define("USER","dbu2267458");
 */
 
+define("HOST","mysql:host=localhost;dbname=id18478820_dbfinal");
+define("PASSWORD", "}n%0+tEa{(7A-69A");
+define("USER", "id18478820_usfinal");

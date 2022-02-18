@@ -1,6 +1,7 @@
 <?php
     require_once 'core/210322ValidacionFormularios.php';
-    
+    require_once 'model/DepartamentoPDO.php';
+    require_once 'model/Departamento.php';
     require_once 'model/REST.php';
     require_once 'model/DB.php';
     require_once 'model/UsuarioDB.php';

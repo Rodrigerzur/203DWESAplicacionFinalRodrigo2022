@@ -321,3 +321,14 @@ input{
 .formularioconversor{
     padding-bottom:70px;
 }
+
+.mostrarDepartamento{
+    margin:auto;
+    position: relative;
+    text-align: center;
+    background:white;
+    color: black;
+    font-size:1.5em;
+    width:50%;
+    padding:20px;
+}

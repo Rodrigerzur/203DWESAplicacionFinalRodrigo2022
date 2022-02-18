@@ -150,3 +150,44 @@
         </ul>
     </fieldset>
 </form>
+
+<form name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="form" id="formulariodepartamentoajeno">
+    <fieldset>
+        <p class="tituloiniciarsesion">Buscar Departamento Por Codigo (Ajeno)<p>
+        <p class="pInformacion">Permite buscar la informacion de un departamento pasando un codigo de departamento. El formato del campo es un codigo de departamento. La informacion se trata con codigos de departamento.</p>
+        <ul>
+            <!--Campo buscarInput OBLIGATORIO-->
+            <li>
+                <div class="imageninformacion">
+                    <label for="codDepartamentoAjeno"><p class="pProvincia">Código Departamento*</p></label>
+                    <input name="codDepartamentoAjeno" id="CodDepartamento" type="text" value="<?php echo isset($_REQUEST['codDepartamentoAjeno']) ? $_REQUEST['codDepartamentoAjeno'] : null; ?>" placeholder="Codigo de Departamento">
+                    <p class="mensajeErrorRest"><?php echo $aErroresDepartamentoAjeno['eBuscarDepartamento'] ?></p>
+                    <p class="mensajeErrorRest"><?php echo $aErroresDepartamentoAjeno['eResultado'] ?></p>
+                </div>
+            </li>
+            <!--Campo Boton BUSCAR-->
+            <li>
+                <input type="submit" value="BUSCAR" name="buscarDepartamentoAjeno" class="buscarDepartamento"/>
+            </li>
+        </ul>
+    </fieldset>
+</form>
+<div class="mostrarDepartamento">
+    <?php if ($aErroresDepartamentoAjeno["eBuscarDepartamento"] == null && $aErroresDepartamentoAjeno["eResultado"] == null && isset($_REQUEST["buscarDepartamentoAjeno"]) && $oResultadoDepAjeno != null) { //Compruebo  que los campos del array de errores están vacíos y el usuario le ha dado al botón de enviar.?>
+        <p class="mensajeRest">    
+            <span class="tituloRest">Codigo:</span> <?php echo $aDepartamentoAjeno['codDepartamento']; //Devuelve el codigo del departamento. ?>
+        </p>
+        <p class="mensajeRest">
+            <span class="tituloRest">Descripcion:</span> <?php echo $aDepartamentoAjeno['descDepartamento']; //Devuelve la descripcion del departamento. ?>
+        </p>
+        <p class="mensajeRest">
+            <span class="tituloRest">Fecha de creacion:</span> <?php echo date('d/m/Y H:i:s', $aDepartamentoAjeno['fechaCreacionDepartamento']); //Devuelve la fecha de creacion del departamento. ?>
+        </p>
+        <p class="mensajeRest">
+            <span class="tituloRest">Volumen de negocio:</span> <?php echo $aDepartamentoAjeno['volumenDeNegocio']; //Devuelve el volumen de negocio del departamento. ?>
+        </p>
+        <p class="mensajeRest">
+            <span class="tituloRest">Fecha de baja:</span> <?php echo date('d/m/Y H:i:s', $aDepartamentoAjeno['fechaBajaDepartamento']); //Devuelve la fecha de baja del departamento. ?>
+        </p>
+    <?php } ?>
+</div>
