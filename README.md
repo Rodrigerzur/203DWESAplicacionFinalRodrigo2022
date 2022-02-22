@@ -11,7 +11,7 @@ Aplicacion final de la asignatura DWES que engloba muchos de los aspectos estudi
 
 # Como desplegar
 
-* Descargar el archivo comprimido con la ultmima release
+* Descargar el archivo comprimido con la ultima release
 * Descomprimir en la ruta especificada
 * Cambiar el fichero configDBPDO.php si es necesario para el correcto funcionamiento de la base de datos.
 
