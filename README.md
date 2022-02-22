@@ -9,7 +9,11 @@ Aplicacion final de la asignatura DWES que engloba muchos de los aspectos estudi
 
 # Funcionalidades
 
+# Como desplegar
 
+*Descargar el archivo comprimido con la ultmima release
+*Descomprimir en la ruta especificada
+*Cambiar el fichero configDBPDO.php si es necesario para el correcto funcionamiento de la base de datos.
 
 # Tecnologías usadas en el Front end y Back end.
 
