@@ -332,3 +332,208 @@ input{
     width:50%;
     padding:20px;
 }
+
+.cajadepartamentos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fieldsetdepartamentos{
+    border-radius: 32px;
+    width: auto;
+    height: 370px;
+    margin: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #e8e8e8;
+    padding: 10px;
+    max-width: 800px;
+}
+.tabladepartamentos{
+    border: 2px solid black;
+    border-radius: 32px;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-left: 85px;
+    margin-right: 85px;
+    width: auto;
+    max-width: 735px;
+    position: absolute;
+    top: 260px;
+}
+.tabladepartamentos tr th{
+    border: 1px solid black;
+    padding: 5px;
+}
+.tabladepartamentos tr td{
+    text-align: center;
+    width: 150px;
+}
+.tabladepartamentos tr:nth-child(2) td{
+    border-bottom: 1px solid black;
+}
+.tabladepartamentos tr:nth-child(3) td{
+    border-bottom: 1px solid black;
+}
+.botonestabla{
+    display: flex;
+    max-width: 120px;
+    flex-direction: row;
+    border: 0px solid transparent;
+}
+.imagenboton{
+    width: 40px;
+    padding: 5px;
+}
+.botonesdepartamentos{
+    width: 138px;
+    padding: 10px;
+    text-align: center;
+    background-color: #3d69e1;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 32px;
+    border: none;
+    opacity: 0.92;
+}
+.botonesdepartamentos:hover{
+    transition: background-color 0.3s linear 0s;
+    background-color: #3457b2;
+}
+.pBuscarDepartamento{
+    font-size: 15px;
+    color: #717276;
+    margin-left: 20px;
+}
+.fieldsetdepartamentos ul li{
+    list-style: none;
+}
+#descDepartamento{
+    width: 256px;
+    font-size: 90%;
+    padding: 10px;
+    background-color: #fff;
+    color: #3b3e43;
+    border-radius: 32px;
+    border: none;
+    opacity: 0.92;
+    margin-left: 10px;
+}
+#buscar{
+    width: 140px;
+    padding: 10px;
+    text-align: center;
+    background-color: #3d69e1;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-left: 15px;
+    border-radius: 32px;
+    border: none;
+    opacity: 0.92;
+}
+#buscar:hover{
+    transition: background-color 0.3s linear 0s;
+    background-color: #3457b2;
+}
+.titulometodepartamentos{
+    color: #181b21;
+    font-size: 210%;
+    padding-left: 19px;
+    padding-bottom: 15px;
+    padding-right: 20px;
+}
+.mensajeErrorDepartamento{
+    margin-top: 5px;
+    color: #D90000;
+    text-align: center;
+    font-size: 13px;
+    max-width: 260px;
+    margin-right: 190px;
+    float: right;
+}
+.rFiltrarDepartamento{
+    font-size: 15px;
+    color: #717276;
+    margin-right: 10px;
+}
+.cajadepartamentosdos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -100px;
+}
+.botonespaginado{
+    background-color: transparent;
+    border: none;
+}
+#numPagina{
+    margin-bottom: 4px;
+    text-align: center;
+    font-size: 16px;
+    
+}
+.dardebajadepartamento{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.eliminardepartamento{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.modificardepartamento{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.mensajeErrorAltaDep{
+    width: 300px;
+    margin-top: 10px;
+    color: #D90000;
+    text-align: center;
+    font-size: 13px;
+}
+
+.dardebaja{
+    width: 300px;
+    font-size: 90%;
+    padding: 10px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 32px;
+    border: none;
+    opacity: 0.92;
+}
+.dardebaja:hover{
+    transition: background-color 0.3s linear 0s;
+    background-color: #851C00;
+}
+
+.eliminar{
+    width: 300px;
+    font-size: 90%;
+    padding: 10px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 32px;
+    border: none;
+    opacity: 0.92;
+}
+.eliminar:hover{
+    transition: background-color 0.3s linear 0s;
+    background-color: #851C00;
+}

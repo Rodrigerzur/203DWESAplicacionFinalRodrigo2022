@@ -21,9 +21,14 @@
         "detalle" => "controller/cDetalle.php",
         "registro" => "controller/cRegistro.php",
         "micuenta" => "controller/cMiCuenta.php",
+        "altadepartamento" => "controller/cAltaDepartamento.php",
+        "eliminardepartamento" => "controller/cEliminarDepartamento.php",
+        "mtodepartamentos" => "controller/cMtoDepartamentos.php",
+        "consultarmodificardepartamento" => "controller/cConsultarModificarDepartamento.php",
         "cambiarpassword" => "controller/cCambiarPassword.php",
         "borrarcuenta" => "controller/cBorrarCuenta.php",
-        "rest"=>"controller/cREST.php"
+        "rest"=>"controller/cREST.php",
+        "bajalogicadepartamento" => "controller/cBajaLogicaDepartamento.php"
     ];
     $vistas = [
         "layout" => "view/layout.php",
@@ -37,6 +42,11 @@
         "micuenta" => "view/vMiCuenta.php",
         "cambiarpassword" => "view/vCambiarPassword.php",
         "borrarcuenta" => "view/vBorrarCuenta.php",
-        "rest"=>"view/vREST.php"
+        "rest"=>"view/vREST.php",
+        "altadepartamento" => "view/vAltaDepartamento.php",
+        "eliminardepartamento" => "view/vEliminarDepartamento.php",
+        "mtodepartamentos" => "view/vMtoDepartamentos.php",
+        "consultarmodificardepartamento" => "view/vConsultarModificarDepartamento.php",
+         "bajalogicadepartamento" => "view/vBajaLogicaDepartamento.php"
     ]
 ?>
