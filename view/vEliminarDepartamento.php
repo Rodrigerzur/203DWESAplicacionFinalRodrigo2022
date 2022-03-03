@@ -1,8 +1,8 @@
 <article class="titulopagina">
-    <h2>Borrar cuenta</h2>
+    <h2>Eliminar Departamentos</h2>
 </article>
 <main>
-    <form name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="formRegistro">
+    <form name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="form">
         <fieldset>
             <p class="tituloRegistros">Eliminar departamento<p>
             <ul>
@@ -36,7 +36,7 @@
                 </li>
                 <!--Campo Botones Eliminar y Cancelar-->
                 <li>
-                    <input type="submit" value="eliminar" name="eliminar" class="eliminar" onclick="return confirmarEliminar()"/>
+                    <input type="submit" value="ELIMINAR" name="eliminar" class="cambiarpassword" onclick="return confirmarEliminar()"/>
                     <span class="linebreak">O</span>
                     <input type="submit" value="CANCELAR" name="cancelar" class="cancelar"/>
                 </li>

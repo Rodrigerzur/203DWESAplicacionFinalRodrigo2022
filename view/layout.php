@@ -23,7 +23,7 @@
             <p><a href="doc/html/index.html" target="_blank">Documentación</a></p>
             <p><a href="doc/cv.pdf" target="_blank">CV</a></p>
              <p><a href="doc/TECNOLOGIAS USADAS.pdf" target="_blank">Tecnologias usadas</a></p>
-            <p><a href="https://github.com/Rodrigerzur/203DWESAplicacionFinalRodrigo2022" target="_blank">Github</a> Ultima actualización: 04/02/2022</p>
+            <p><a href="https://github.com/Rodrigerzur/203DWESAplicacionFinalRodrigo2022" target="_blank">Github</a> Ultima actualización: 03/03/2022</p>
         </footer>
     </body>
 </html>

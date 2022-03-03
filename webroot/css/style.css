@@ -283,7 +283,7 @@ input{
 .pdfbox{
     width: 240px;
     height: 375px;
-    
+
     border: 2px solid black;
     padding-bottom: 10px;
     display: inline-flex;
@@ -339,29 +339,13 @@ input{
     justify-content: center;
 }
 .fieldsetdepartamentos{
-    border-radius: 32px;
-    width: auto;
-    height: 370px;
-    margin: auto;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    background-color: #e8e8e8;
-    padding: 10px;
-    max-width: 800px;
+    margin:auto;
+    border:3px solid black;
 }
 .tabladepartamentos{
-    border: 2px solid black;
-    border-radius: 32px;
-    border-collapse: collapse;
-    margin-top: 10px;
-    margin-left: 85px;
-    margin-right: 85px;
-    width: auto;
-    max-width: 735px;
-    position: absolute;
-    top: 260px;
+    margin:10px;
+    width:50%;
+    border:3px solid black;
 }
 .tabladepartamentos tr th{
     border: 1px solid black;
@@ -369,7 +353,6 @@ input{
 }
 .tabladepartamentos tr td{
     text-align: center;
-    width: 150px;
 }
 .tabladepartamentos tr:nth-child(2) td{
     border-bottom: 1px solid black;
@@ -383,42 +366,32 @@ input{
     flex-direction: row;
     border: 0px solid transparent;
 }
-.imagenboton{
-    width: 40px;
-    padding: 5px;
-}
 .botonesdepartamentos{
     width: 138px;
     padding: 10px;
     text-align: center;
-    background-color: #3d69e1;
+    background-color: green;
     color: white;
     text-transform: uppercase;
     cursor: pointer;
     margin-left: 10px;
-    border-radius: 32px;
     border: none;
     opacity: 0.92;
 }
-.botonesdepartamentos:hover{
-    transition: background-color 0.3s linear 0s;
-    background-color: #3457b2;
-}
 .pBuscarDepartamento{
-    font-size: 15px;
-    color: #717276;
+    font-size: 20px;
+    color: black;
     margin-left: 20px;
 }
 .fieldsetdepartamentos ul li{
     list-style: none;
 }
 #descDepartamento{
-    width: 256px;
+    width: 260px;
     font-size: 90%;
     padding: 10px;
     background-color: #fff;
     color: #3b3e43;
-    border-radius: 32px;
     border: none;
     opacity: 0.92;
     margin-left: 10px;
@@ -427,32 +400,24 @@ input{
     width: 140px;
     padding: 10px;
     text-align: center;
-    background-color: #3d69e1;
+    background-color: red;
     color: white;
     text-transform: uppercase;
     cursor: pointer;
     margin-left: 15px;
-    border-radius: 32px;
     border: none;
     opacity: 0.92;
 }
-#buscar:hover{
-    transition: background-color 0.3s linear 0s;
-    background-color: #3457b2;
-}
 .titulometodepartamentos{
-    color: #181b21;
+    color: black;
     font-size: 210%;
-    padding-left: 19px;
     padding-bottom: 15px;
-    padding-right: 20px;
 }
 .mensajeErrorDepartamento{
     margin-top: 5px;
-    color: #D90000;
+    color: red;
     text-align: center;
-    font-size: 13px;
-    max-width: 260px;
+    font-size: 20px;
     margin-right: 190px;
     float: right;
 }
@@ -465,31 +430,40 @@ input{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -100px;
 }
 .botonespaginado{
-    background-color: transparent;
+    background-color: white;
+    padding:5px;
+    margin:5px;
     border: none;
 }
 #numPagina{
-    margin-bottom: 4px;
+    background-color: white;
+    padding:5px;
+    margin:5px;
     text-align: center;
     font-size: 16px;
-    
+
 }
 .dardebajadepartamento{
-    background-color: transparent;
+    background-color: yellow;
+    padding:2px;
+    margin:2px;
     border: none;
     cursor: pointer;
 }
 .eliminardepartamento{
-    background-color: transparent;
     border: none;
+    margin:2px;
+    padding:2px;
     cursor: pointer;
+    background-color:red;
 }
 
 .modificardepartamento{
-    background-color: transparent;
+    background-color: green;
+    margin:2px;      
+    padding:2px;
     border: none;
     cursor: pointer;
 }
@@ -502,24 +476,6 @@ input{
     font-size: 13px;
 }
 
-.dardebaja{
-    width: 300px;
-    font-size: 90%;
-    padding: 10px;
-    text-align: center;
-    background-color: red;
-    color: white;
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 32px;
-    border: none;
-    opacity: 0.92;
-}
-.dardebaja:hover{
-    transition: background-color 0.3s linear 0s;
-    background-color: #851C00;
-}
-
 .eliminar{
     width: 300px;
     font-size: 90%;
@@ -529,7 +485,6 @@ input{
     color: white;
     text-transform: uppercase;
     cursor: pointer;
-    border-radius: 32px;
     border: none;
     opacity: 0.92;
 }

@@ -1,17 +1,15 @@
 <article class="titulopagina">
-    <h2>Borrar cuenta</h2>
+    <h2>MTO DEPARTAMENTOS</h2>
 </article>
 <form class="buttonback">
-    <input type="submit" value="VOLVER" name="volverdepartamentos" class="volverdetalle"/>
+     <input type="submit" value="Volver" name="volver" class="volver"/>
 </form>
 <div class="cajadepartamentos">
     <form name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="departamentosFormulario" class="form">
         <fieldset class="fieldsetdepartamentos">
-            <p class="titulometodepartamentos">MtoDepartamentos 
+            <p class="titulometodepartamentos">MtoDepartamentos  </p>   
                 <input class="botonesdepartamentos" id="add" type="submit" name="add" value="Añadir"/>
-                <input class="botonesdepartamentos" id="export" type="submit" name="export" value="Exportar"/>
-                <input class="botonesdepartamentos" id="import" type="submit" name="import" value="Importar"/>
-            </p>
+           
             <ul>
                 <!--Campo Alfabetico DescDepartamento OPCIONAL para realizar la busqueda-->
                 <li>
@@ -26,11 +24,11 @@
                 <li>
                     <div>
                         <a class="pBuscarDepartamento">Estado: </a>
-                        <input name="estado" id="tipoDepartamentoTodos" type="radio" value="todos" <?php echo isset($_SESSION['criterioBusquedaDepartamentos']['estado']) ? ($_SESSION['criterioBusquedaDepartamentos']['estado'] == ESTADO_TODOS ? 'checked' : '') : 'checked'; ?>/>
+                        <input name="estado" id="tipoDepartamentoTodos" type="radio" value="todos" <?php echo isset($_SESSION['criterioBusquedaDepartamentos']['estado']) ? ($_SESSION['criterioBusquedaDepartamentos']['estado'] == DepartamentoPDO::ESTADO_TODOS ? 'checked' : '') : 'checked'; ?>/>
                         <label for="tipoDepartamentoTodos"><a class="rFiltrarDepartamento">Todos</a></label>
-                        <input name="estado" id="tipoDepartamentoAltas" type="radio" value="altas" <?php echo isset($_SESSION['criterioBusquedaDepartamentos']['estado']) ? ($_SESSION['criterioBusquedaDepartamentos']['estado'] == ESTADO_ALTAS ? 'checked' : '') : ''; ?> />
+                        <input name="estado" id="tipoDepartamentoAltas" type="radio" value="altas" <?php echo isset($_SESSION['criterioBusquedaDepartamentos']['estado']) ? ($_SESSION['criterioBusquedaDepartamentos']['estado'] == DepartamentoPDO::ESTADO_ALTAS ? 'checked' : '') : ''; ?> />
                         <label for="tipoDepartamentoAltas"><a class="rFiltrarDepartamento">Altas</a></label>
-                        <input name="estado" id="tipoDepartamentoBajas" type="radio" value="bajas" <?php echo isset($_SESSION['criterioBusquedaDepartamentos']['estado']) ? ($_SESSION['criterioBusquedaDepartamentos']['estado'] == ESTADO_BAJAS ? 'checked' : '') : ''; ?> />
+                        <input name="estado" id="tipoDepartamentoBajas" type="radio" value="bajas" <?php echo isset($_SESSION['criterioBusquedaDepartamentos']['estado']) ? ($_SESSION['criterioBusquedaDepartamentos']['estado'] == DepartamentoPDO::ESTADO_BAJAS ? 'checked' : '') : ''; ?> />
                         <label for="tipoDepartamentoBajas"><a class="rFiltrarDepartamento">Bajas</a></label>
                     </div>
                 </li>
@@ -64,13 +62,13 @@
                     <td><?php echo $aDepartamento['fechaBaja']; ?></td>
                     <td class="botonestabla">
                         <button type="submit" form="departamentosFormulario" name="modificar" value="<?php echo $aDepartamento['codDepartamento']; ?>" class="modificardepartamento">
-                            
+                            M
                         </button>
                         <button type="submit" form="departamentosFormulario" name="dardebaja" value="<?php echo $aDepartamento['codDepartamento']; ?>" class="dardebajadepartamento">
-                            
+                            B
                         </button>
                         <button type="submit" form="departamentosFormulario" name="eliminar" value="<?php echo $aDepartamento['codDepartamento']; ?>" class="eliminardepartamento">
-                            
+                            E
                         </button>
                     </td>
                 </tr>
@@ -82,16 +80,16 @@
 </div>
 <div class="cajadepartamentosdos">
     <button type="submit" form="departamentosFormulario" name="paginaPrimera" value="paginaPrimera" class="botonespaginado">
-       
+       <<
     </button>
     <button type="submit" form="departamentosFormulario" name="paginaAnterior" value="paginaAnterior" class="botonespaginado">
-        
+        <
     </button>
     <div id="numPagina"><?php echo $_SESSION['numPaginacionDepartamentos'];?> / <?php echo ceil($iDepartamentosTotales);?></div>
     <button type="submit" form="departamentosFormulario" name="paginaSiguiente" value="paginaSiguiente" class="botonespaginado">
-        
+        >
     </button>
     <button type="submit" form="departamentosFormulario" name="paginaUltima" value="paginaUltima" class="botonespaginado">
-       
+       >>
     </button>
 </div>

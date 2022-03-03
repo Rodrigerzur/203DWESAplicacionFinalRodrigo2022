@@ -1,8 +1,8 @@
 <article class="titulopagina">
-    <h2>Borrar cuenta</h2>
+    <h2>Alta Departamentos</h2>
 </article>
 <main>
-    <form name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="formRegistro">
+    <form name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="form">
         <fieldset>
             <p class="tituloRegistros">Alta de nuevo departamento<p>
             <ul>
@@ -35,7 +35,7 @@
                 </li>
                 <!--Campo Botones Crear y Cancelar-->
                 <li>
-                    <input type="submit" value="crear" name="crear" class="crear"/>
+                    <input type="submit" value="CREAR" name="crear" class="crear"/>
                     <span class="linebreak">O</span>
                     <input type="submit" value="CANCELAR" name="cancelar" class="cancelar"/>
                 </li>

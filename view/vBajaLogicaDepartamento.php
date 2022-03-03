@@ -1,8 +1,8 @@
 <article class="titulopagina">
-    <h2>Borrar cuenta</h2>
+    <h2>Baja Departamentos</h2>
 </article>
 <main>
-    <form name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="formRegistro">
+    <form name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="form">
         <fieldset>
             <p class="tituloRegistros">Dar de baja departamento<p>
             <ul>
@@ -36,7 +36,7 @@
                 </li>
                 <!--Campo Botones Dar de baja y Cancelar-->
                 <li>
-                    <input type="submit" value="dar de baja" name="dardebaja" class="dardebaja" onclick="return confirmarDarDeBaja()"/>
+                    <input type="submit" value="DAR DE BAJA" name="dardebaja" class="cambiarpassword" onclick="return confirmarDarDeBaja()"/>
                     <span class="linebreak">O</span>
                     <input type="submit" value="CANCELAR" name="cancelar" class="cancelar"/>
                 </li>

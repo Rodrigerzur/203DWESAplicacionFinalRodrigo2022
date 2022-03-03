@@ -7,7 +7,7 @@
  */
 
 
-if(isset($_REQUEST['volverdepartamentos'])){ //Si el usuario pulsa el boton de volver, mando al usuario a la pagina de inicio privado
+if(isset($_REQUEST['volver'])){ //Si el usuario pulsa el boton de volver, mando al usuario a la pagina de inicio privado
     $_SESSION['criterioBusquedaDepartamentos']['descripcionBuscada'] = ""; //Si el usuario sale de MtoDepartamentos, elimino el valor que hay guardado del campo de busqueda por descripcion
     $_SESSION['numPaginacionDepartamentos'] = 1; //Asigno la pagina de departamentos a 1
     $_SESSION['criterioBusquedaDepartamentos']['estado'] = ESTADO_TODOS;
@@ -83,7 +83,7 @@ $aLista = [ //Array de lista de opciones de filtrado
 
 if (isset($_REQUEST['buscar'])) { //Si el usuario pulsa el boton de buscar
     $entradaOK = true; //Variable de entrada correcta inicializada a true
-    $aErrores['descBuscarDepartamento'] = validacionFormularios::comprobarAlfabetico($_REQUEST['descDepartamento'], 255, 1, OPCIONAL); //Valido los datos pasados por teclado de la descripcion del departamento
+    $aErrores['descBuscarDepartamento'] = validacionFormularios::comprobarAlfabetico($_REQUEST['descDepartamento'], 255, 1, 0); //Valido los datos pasados por teclado de la descripcion del departamento
     $aErrores['filtroDepartamentos'] = validacionFormularios::validarElementoEnLista($_REQUEST['estado'], $aLista);
     
     //Comprobar si algun campo del array de errores ha sido rellenado
@@ -101,20 +101,20 @@ if ($entradaOK) {//Si la entrada ha sido correcta
     $_SESSION['criterioBusquedaDepartamentos']['descripcionBuscada'] = $_REQUEST['descDepartamento']; //Guardo en la session el contenido del campo de buscar departamento por descripcion
     switch ($_REQUEST['estado']){ //Guardo el estado que ha seleccionado el usuario en el filtrado de la busqueda
         case 'todos':
-            $sEstado = ESTADO_TODOS;
+            $sEstado = DepartamentoPDO::ESTADO_TODOS;
             break;
         case 'altas':
-            $sEstado = ESTADO_ALTAS;
+            $sEstado = DepartamentoPDO::ESTADO_ALTAS;
             break;
         case 'bajas':
-            $sEstado = ESTADO_BAJAS;
+            $sEstado = DepartamentoPDO::ESTADO_BAJAS;
             break;
     }
     $_SESSION['criterioBusquedaDepartamentos']['estado'] = $sEstado; //Guardo el valor del estado en la session
 }
 
 $aDepartamentosVista = []; //Array para guardar el contenido de un departamento
-$oResultadoBuscar = DepartamentoPDO::buscaDepartamentosPorEstado($_SESSION['criterioBusquedaDepartamentos']['descripcionBuscada'] ?? '', $_SESSION['criterioBusquedaDepartamentos']['estado'] ?? ESTADO_TODOS, $_SESSION['numPaginacionDepartamentos']-1); //Obtengo los datos del departamento con el metodo buscaDepartamentosPorDesc
+$oResultadoBuscar = DepartamentoPDO::buscaDepartamentosPorEstado($_SESSION['criterioBusquedaDepartamentos']['descripcionBuscada'] ?? '', $_SESSION['criterioBusquedaDepartamentos']['estado'] ?? DepartamentoPDO::ESTADO_TODOS, $_SESSION['numPaginacionDepartamentos']-1); //Obtengo los datos del departamento con el metodo buscaDepartamentosPorDesc
 if ($oResultadoBuscar){ //Si el resultado es correcto
     foreach($oResultadoBuscar as $aDepartamento){//Recorro el objeto del resultado que contiene un array
         array_push($aDepartamentosVista, [//Hago uso del metodo array push para meter los valores en el array $aDepartamentosVista

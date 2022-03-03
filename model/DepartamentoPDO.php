@@ -8,6 +8,12 @@ class DepartamentoPDO {
      * @param string $codDepartamento Codigo del departamento
      * @return boolean|\Departamento Si existe, un objeto con el contenido del departamento, si no existe false
      */
+    
+    public const ESTADO_TODOS=0;
+    public const ESTADO_ALTAS=1;
+    public const ESTADO_BAJAS=2;
+    
+    
     public static function buscarDepartamentosPorCod($codDepartamento){
         //Consulta SQL para validar si el codigo de departamento existe
         $consultaBuscarDepartamento = <<<CONSULTA
@@ -22,7 +28,7 @@ class DepartamentoPDO {
                 $oResultado->T02_CodDepartamento,
                 $oResultado->T02_DescDepartamento,
                 $oResultado->T02_FechaCreacionDepartamento,
-                $oResultado->T02_VolumenDeNegocio
+                $oResultado->T02_VolumenNegocio
             );
         }else{
             return false;
@@ -52,7 +58,7 @@ class DepartamentoPDO {
                     $oDepartamento['T02_CodDepartamento'],
                     $oDepartamento['T02_DescDepartamento'],
                     $oDepartamento['T02_FechaCreacionDepartamento'],
-                    $oDepartamento['T02_VolumenDeNegocio'],
+                    $oDepartamento['T02_VolumenNegocio'],
                     $oDepartamento['T02_FechaBajaDepartamento']
                 );
             }
@@ -100,7 +106,7 @@ class DepartamentoPDO {
                     $oDepartamento['T02_CodDepartamento'],
                     $oDepartamento['T02_DescDepartamento'],
                     $oDepartamento['T02_FechaCreacionDepartamento'],
-                    $oDepartamento['T02_VolumenDeNegocio'],
+                    $oDepartamento['T02_VolumenNegocio'],
                     $oDepartamento['T02_FechaBajaDepartamento']
                 );
             }
@@ -140,7 +146,7 @@ class DepartamentoPDO {
         $fechaCreacionDepartamento = time(); //Variable con la fecha actual en formato int
         //Consulta SQL para dar de alta el nuevo departamento en la base de datos
         $consultaAltaDepartamento = <<<CONSULTA
-            INSERT INTO T02_Departamento(T02_CodDepartamento, T02_DescDepartamento, T02_FechaCreacionDepartamento, T02_VolumenDeNegocio) 
+            INSERT INTO T02_Departamento(T02_CodDepartamento, T02_DescDepartamento, T02_FechaCreacionDepartamento, T02_VolumenNegocio) 
             VALUES ('{$codDepartamento}','{$descDepartamento}',{$fechaCreacionDepartamento},{$volumenNegocio});
         CONSULTA;
             
@@ -210,7 +216,7 @@ class DepartamentoPDO {
         //Consulta SQL para actualizar la descripcion del departamento y el volumen de negocio
         $consultaModificarDepartamento = <<<CONSULTA
             UPDATE T02_Departamento SET T02_DescDepartamento = '{$descDepartamento}', 
-            T02_VolumenDeNegocio = {$volumenNegocio}
+            T02_VolumenNegocio = {$volumenNegocio}
             WHERE T02_CodDepartamento = '{$codDepartamento}';
         CONSULTA;
             
