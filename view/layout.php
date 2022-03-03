@@ -19,10 +19,11 @@
         <?php require_once $vistas[$_SESSION['paginaEnCurso']]; ?>
 
         <footer class="footer">
-            <p><a>&copy;</a><a href="http://daw203.ieslossauces.es/index.php">Rodrigo Geras</a> Todos los derechos reservados.</p>
-            <p><a href="doc/html/index.html">Documentación</a></p>
-             <p><a href="doc/TECNOLOGIAS USADAS.pdf">Tecnologias usadas</a></p>
-            <p><a href="https://github.com/Rodrigerzur/203DWESAplicacionFinalRodrigo2022">Github</a> Ultima actualización: 04/02/2022</p>
+            <p><a>&copy;</a><a href="http://daw203.ieslossauces.es/index.php" target="_blank">Rodrigo Geras</a> Todos los derechos reservados.</p>
+            <p><a href="doc/html/index.html" target="_blank">Documentación</a></p>
+            <p><a href="doc/cv.pdf" target="_blank">CV</a></p>
+             <p><a href="doc/TECNOLOGIAS USADAS.pdf" target="_blank">Tecnologias usadas</a></p>
+            <p><a href="https://github.com/Rodrigerzur/203DWESAplicacionFinalRodrigo2022" target="_blank">Github</a> Ultima actualización: 03/03/2022</p>
         </footer>
     </body>
 </html>

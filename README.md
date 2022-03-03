@@ -4,7 +4,7 @@
 Aplicacion final de la asignatura DWES que engloba muchos de los aspectos estudiados en el curso.
 
 ### Fecha creación: 31/01/2022
-### Fecha última actualización: 04/02/2022
+### Fecha última actualización: 15/02/2022
 ### Autor: Rodrigo Geras
 
 # Funcionalidades

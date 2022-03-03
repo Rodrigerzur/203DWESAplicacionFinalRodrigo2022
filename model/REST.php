@@ -45,4 +45,24 @@ class REST {
         return $iDevolucion; //Devuelvo el resultado
     }
 
+public static function buscarDepartamentoAjeno($codDepartamentoAjeno){
+        $resultadoAPI = @file_get_contents("https://daw208.ieslossauces.es/208DWESProyectoFinal/api/consultaDepartamentoPorCodigo.php?codDepartamento={$codDepartamentoAjeno}"); //La respuesta de la api en formato json
+        
+        if($resultadoAPI){
+            $JSONDecodificado = json_decode($resultadoAPI, true); //Almaceno la informacion decodificada obtenida de la url como un array
+            
+            if(isset($JSONDecodificado['departamento'])){
+                return new Departamento(
+                    $JSONDecodificado['departamento']['codDepartamento'],
+                    $JSONDecodificado['departamento']['descDepartamento'],
+                    $JSONDecodificado['departamento']['fechaCreacionDepartamento'],
+                    $JSONDecodificado['departamento']['volumenDeNegocio'],
+                    $JSONDecodificado['departamento']['fechaBajaDepartamento']
+                );
+            }else{
+                return $JSONDecodificado['error'];
+            }
+        }
+    }
 }
+?>
